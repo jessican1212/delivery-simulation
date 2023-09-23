@@ -1,0 +1,24 @@
+.container {
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 4px 4px 4px rgba(94, 94, 94, 0.1);
+    margin: 20px;
+    display: grid;
+    justify-items: center;
+}
+
+#flexbox {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#submit {
+    width: 200px;
+    margin-top: 35px;
+    background-color: #FA5246;
+}

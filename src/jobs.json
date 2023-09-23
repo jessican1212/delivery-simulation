@@ -1,0 +1,9 @@
+[
+    {"name": "Maxwell's Diner", "cost": 40.41, "items": 5, "distance": 3.1},
+    {"name": "The Red Panda", "cost": 23.50, "items": 6, "distance": 1.0},
+    {"name": "Velvet Vineyard", "cost": 64.22, "items": 4, "distance": 1.4},
+    {"name": "Sushi House", "cost": 19.01, "items": 2, "distance": 6.8},
+    {"name": "Patty King", "cost": 14.11, "items": 3, "distance": 2.8},
+    {"name": "Taco Haven", "cost": 8.05, "items": 2, "distance": 0.7},
+    {"name": "Lucy's", "cost": 52.99, "items": 11, "distance": 3.5}
+]
