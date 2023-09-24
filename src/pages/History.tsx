@@ -1,9 +1,23 @@
-import React from 'react'
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
-const History = () => {
+
+function History() {
+  const jobs = useSelector((state: RootState) => state.jobReducer);
+
   return (
-    <div>History</div>
-  )
-}
+    <div>
+      <h1>Jobs: </h1>
 
-export default History
+      <ul>
+        {jobs.map((job, index) => (
+          <li key={index}>
+          {job.name} | {job.cost} | {job.items} | {job.distance}
+        </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+export default History;

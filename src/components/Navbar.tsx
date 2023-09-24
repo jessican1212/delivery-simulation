@@ -19,7 +19,7 @@ const Navbar= () =>{
         <Link style={liStyles} to="/">Dashboard</Link>
       </li>
       <li>
-        <Link style={liStyles} to="/Map">Map</Link>
+        <Link style={liStyles} to="/Task">Task</Link>
       </li>
       <li>
         <Link style={liStyles} to="/History">History</Link>

@@ -3,6 +3,9 @@ import './Dashboard.css'
 import Delivery from '../../components/Delivery/Delivery'
 import jobsJSON from '../../jobs.json'
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { addJob, deleteJob } from "../../features/jobSlice";
+import { RootState } from "../../store";
 
 interface Job {
   name: string,
@@ -12,6 +15,9 @@ interface Job {
 }
 
 const Dashboard = () => {
+
+  const dispatch = useDispatch();
+  const jobs = useSelector((state: RootState) => state.jobReducer);
 
   const [selectedJobs, setSelectedJobs] = useState<Job[]>([]);
 
@@ -32,7 +38,10 @@ const Dashboard = () => {
 
   const handleSubmit: () => void = () => {
     console.log(selectedJobs);
-    //FIGURE OUT REDUX
+    for (var Job of selectedJobs) {
+      dispatch(addJob({ name: Job.name, cost: Job.cost, items: Job.items, distance: Job.distance }));
+    }
+
   }
 
   return (
@@ -51,7 +60,7 @@ const Dashboard = () => {
             distance={job.distance}
             onCheckboxChange={onCheckboxChange}/>)}
         </div>
-        <Link to="/map">
+        <Link to="/task">
           <button id="submit" onClick={handleSubmit}>Submit</button>
       </Link>
       </div>
